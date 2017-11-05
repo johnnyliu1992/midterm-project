@@ -15,7 +15,7 @@ def index(request):
         if mininter=='':
             mininter=10
         else:
-            pass
+            mininter=int(mininter)
         
         P=p
         R1=list(Pinter.objects.filter(OSFA=p).values_list('OSFB', flat=True))
