@@ -15,7 +15,7 @@ def index(request):
         if mininter=='':
             mininter=10
         else:
-            mininter=int(mininter)
+            pass
         
         P=p
         R1=list(Pinter.objects.filter(OSFA=p).values_list('OSFB', flat=True))
@@ -27,7 +27,7 @@ def index(request):
         else:
             R=list(set(R))
             no_of_relate_gene=len(R)
-            if no_of_relate_gene < mininter:
+            if no_of_relate_gene < int(mininter):
                 warning="The results below doesn't meet the minimum number of physical interactions request!"
             else:
                 warning=""
