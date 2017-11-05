@@ -114,6 +114,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+
+ALLOWED_HOSTS = ['quiet-badlands-69674.herokuapp.com', '*']
+
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
