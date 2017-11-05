@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Protein Function Prediction</title>
+<style>
+ table {
+          border-collapse: collapse;
+          width: 50%;
+            }         
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+<br>
+<center>
+<h1>Protein Function Prediction</h1>
+
+<br>
+<form action="{% url 'index' %}" method="GET">
+<table>
+<tr>
+<td>
+<h4>Please enter the protein official symbol:</h4>
+<input type="text" name="p_name" style="width: 150px;" placeholder="Example: STAT3, MAP2K4...">
+<td>
+
+<td>
+<h4>Please enter the minimum interaction:</h4>
+<input type="text" name="mininter" style="width: 150px;" placeholder="Default is 10 ">
+</td>
+
+</tr>
+</table>
+<br>
+<center><input type="submit" value="show"></center>
+</form>
+
+<br>
+<p style="color:red">{{ warning }}</p>
+<table>
+<tr>
+  <td><h2>Protein Name:&nbsp;{{P}}</h2></td>
+  <td><h2>No. of Interactions:&nbsp;{{no_of_relate_gene}}</h2></td>
+<tr>
+
+<tr>
+  <td><h2>Predicted Function:&nbsp;</h2><h2 style="color:red">{{pf1}}</h2></td>
+  <td><h2>Probability:&nbsp;</h2><h2 style="color:green">{{prob1}}</h2></td>
+</tr>
+
+<tr>
+  <td colspan="2"><h2>Other Top Four Rated Functions:</h2></td>
+<tr>
+
+<tr>
+  <td><h2>{{pf2}}</h2></td>
+  <td><h2>{{prob2}}</h2></td>
+</tr>
+
+<tr>
+  <td><h2>{{pf3}}</h2></td>
+  <td><h2>{{prob3}}</h2></td>
+</tr>
+
+<tr>
+  <td><h2>{{pf4}}</h2></td>
+  <td><h2>{{prob4}}</h2></td>
+</tr>
+
+<tr>
+  <td><h2>{{pf5}}</h2></td>
+  <td><h2>{{prob5}}</h2></td>
+</tr>
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+</center>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
